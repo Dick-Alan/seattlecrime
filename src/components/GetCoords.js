@@ -45,30 +45,26 @@ const GetCoords = (props) => {
           const response = callApi.get('');
           setMessage('Scanning.. please wait...')
           setCrimes((await response).data)
+          
           console.log(crimes)
+          var offenses = []
+          crimes.map((crime) => {
+            
+            if (!offenses.includes(crime.offense_parent_group)) {
+                offenses.push(crime.offense_parent_group)
+            }
+ 
+          })
+
+          
+        //   crimes.map(crime => !offenses.includes(crime.offense) && offenses.push([crime.offense]))
+            console.log(offenses)
           setScanned(true)
           setMessage(`...`)
          
           
 
     }
-
-    // const ShowStats = () => {
-    //     if (scanned === true) {
-    //         return (
-    //             <div className="stats">
-    //                 <div style={{color: 'white'}}> Total crimes: {crimes.length}</div>
-    //                 <Stats showlegend={props.showlegend} crimes={crimes}/>
-                    
-                
-
-    //             </div>
-    //         )
-    //     }
-    //     else {
-    //         return <div></div>
-    //     }
-    // }
 
 
     
