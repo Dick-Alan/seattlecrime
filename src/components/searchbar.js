@@ -18,7 +18,7 @@ class SearchBar  extends React.Component  {
                    
                 <form onSubmit={this.onFormSubmit}>
                     <div className="field">
-                        <label style={{backgroundColor: 'white', fontFamily: 'monospace', color: 'black'}} > Find Address or Neighborhood: </label>
+                        <label style={{backgroundColor: 'white', fontFamily: 'monospace', color: 'black'}} > Find Address or Neighborhood: </label> <br></br>
                         <input 
                             type="text" 
                             value={this.state.term}

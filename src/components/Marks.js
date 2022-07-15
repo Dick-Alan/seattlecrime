@@ -169,12 +169,12 @@ const Marks = (props) => {
             
         )
     })
-    var stats = [
-        narcotics.length, theft.length, robbery.length, destruction.length, dui.length, fraud.length, kidnapping.length, 
-        forgery.length, porn.length, extortion.length, vehicletheft.length, sexoffenses.length, stolenproperty.length, embezzlement.length,
-        weapons.length, arson.length, humantrafficking.length, liquor.length, badchecks.length, prostitution.length, family.length, curfew.length, 
-        animalcruelty.length
-     ]
+    // var stats = [
+    //     narcotics.length, theft.length, robbery.length, destruction.length, dui.length, fraud.length, kidnapping.length, 
+    //     forgery.length, porn.length, extortion.length, vehicletheft.length, sexoffenses.length, stolenproperty.length, embezzlement.length,
+    //     weapons.length, arson.length, humantrafficking.length, liquor.length, badchecks.length, prostitution.length, family.length, curfew.length, 
+    //     animalcruelty.length
+    //  ]
     return (
         <div>
             {crimes}
@@ -204,7 +204,7 @@ Human Trafficking:  ${humantrafficking.length}
 Liquor Law:  ${liquor.length}
 Bad Checks:  ${badchecks.length}
 Prostitution:  ${prostitution.length}
-Non-violent, Family:  ${family.length}
+Family:  ${family.length}
 Curfew:  ${curfew.length}
 Animal Cruelty:  ${animalcruelty.length}
                

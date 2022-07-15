@@ -11,10 +11,10 @@ import './Markers.css';
 
 
 const GetCoords = (props) => {
-    const [coords, setCoords] = useState([0, 0])
+
     const [crimes, setCrimes] = useState([])
-    const [scanned, setScanned] = useState(false)
-    const [ message, setMessage ] = useState('...')
+
+   
     const [ limit, setLimit ] = useState('1000')
 
     
@@ -43,7 +43,7 @@ const GetCoords = (props) => {
           
           // console.log(this.state.message, this.state.count, ' times')
           const response = callApi.get('');
-          setMessage('Scanning.. please wait...')
+         
           setCrimes((await response).data)
           
           console.log(crimes)
@@ -53,14 +53,14 @@ const GetCoords = (props) => {
             if (!offenses.includes(crime.offense_parent_group)) {
                 offenses.push(crime.offense_parent_group)
             }
+            return null
  
           })
 
           
         //   crimes.map(crime => !offenses.includes(crime.offense) && offenses.push([crime.offense]))
             console.log(offenses)
-          setScanned(true)
-          setMessage(`...`)
+
          
           
 
@@ -79,7 +79,7 @@ const GetCoords = (props) => {
         # of results (max 5000) <br></br>
         <input id="limit" type="number" defaultValue="1000" onChange={changeValue} max="5000"></input>
         <br></br>
-        <button className="scanbutton" onClick={request}> GET </button>
+        <button className="scanbutton" onClick={request}> Get Crimes </button>
 
         </div>
        
